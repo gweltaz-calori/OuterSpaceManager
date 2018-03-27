@@ -36,7 +36,7 @@ public class SignInActivity extends SharedPreferencesActivity implements SignInV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-
+        setTitle("Sign In");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ButterKnife.bind(this);

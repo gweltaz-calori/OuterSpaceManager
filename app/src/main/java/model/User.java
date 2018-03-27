@@ -1,10 +1,13 @@
 package model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 /**
  * Created by gcalori on 26/03/2018.
  */
 
-public class User {
+public class User implements Serializable {
     private float gas;
     private Long gasModifier;
     private float minerals;
@@ -72,4 +75,6 @@ public class User {
                 ", username='" + username + '\'' +
                 '}';
     }
+
+
 }

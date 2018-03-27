@@ -37,6 +37,7 @@ public class HomeActivity extends SharedPreferencesActivity implements HomeView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        setTitle("Manager");
         ButterKnife.bind(this);
         presenter = new HomePresenterImpl(this);
 

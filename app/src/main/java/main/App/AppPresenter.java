@@ -1,10 +1,14 @@
 package main.App;
 
+import main.AuthPresenter;
+
 /**
  * Created by gcalori on 26/03/2018.
  */
 
-public interface AppPresenter {
+public interface AppPresenter extends AuthPresenter {
 
-    void getCurrentUser(String token);
+    void navigateToBuilding();
+    void navigateToHome();
+
 }

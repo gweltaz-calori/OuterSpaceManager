@@ -8,5 +8,7 @@ public interface Auth {
 
     void storeAccessToken(String token);
 
+    void clearToken();
+
     String getAccessTokenFromPref();
 }

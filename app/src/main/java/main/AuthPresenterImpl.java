@@ -1,4 +1,4 @@
-package main.App;
+package main;
 
 import android.util.Log;
 
@@ -11,21 +11,10 @@ import services.ApiService;
 import static android.content.ContentValues.TAG;
 
 /**
- * Created by gcalori on 26/03/2018.
+ * Created by gcalori on 27/03/2018.
  */
 
-public class AppPresenterImpl implements AppPresenter {
-
-    private AppView view;
-
-    public AppView getView() {
-        return view;
-    }
-
-    AppPresenterImpl(AppView view) {
-        this.view = view;
-    }
-
+public abstract class AuthPresenterImpl implements AuthPresenter {
 
     @Override
     public void getCurrentUser(String token) {
@@ -39,7 +28,7 @@ public class AppPresenterImpl implements AppPresenter {
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.code() == 200) {
                     User user = response.body();
-                    view.onUserLoaded(user);
+                    getAuthView().onUserLoaded(user);
                 }
             }
 
@@ -49,4 +38,11 @@ public class AppPresenterImpl implements AppPresenter {
             }
         });
     }
+
+    @Override
+    public void logout() {
+        this.getAuthView().logout();
+    }
+
+    protected abstract AuthView getAuthView();
 }

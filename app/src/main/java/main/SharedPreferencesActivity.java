@@ -20,6 +20,14 @@ public abstract class SharedPreferencesActivity extends AppCompatActivity  imple
     }
 
     @Override
+    public void clearToken() {
+        SharedPreferences preferences = getSharedPreferences("spacePref",MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove("accessToken");
+        editor.apply();
+    }
+
+    @Override
     public String getAccessTokenFromPref() {
         SharedPreferences preferences = getSharedPreferences("spacePref",MODE_PRIVATE);
         return preferences.getString("accessToken",null);

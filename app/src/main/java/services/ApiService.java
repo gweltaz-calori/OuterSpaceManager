@@ -1,5 +1,6 @@
 package services;
 
+import model.BuildingResponse;
 import model.User;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -9,6 +10,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 /**
  * Created by gcalori on 26/03/2018.
@@ -36,6 +38,17 @@ public interface ApiService {
 
     @GET("users/get")
     Call<User> getUser(
+            @Header("x-access-token") String token
+    );
+
+    @GET("buildings/list")
+    Call<BuildingResponse> getBuildings(
+            @Header("x-access-token") String token
+    );
+
+    @POST("buildings/create/{buildingId}")
+    Call<BuildingResponse> createBuilding(
+            @Path("buildingId") Long buildingId,
             @Header("x-access-token") String token
     );
 
