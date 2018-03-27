@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="com.example.gcalori.outerspacemanager.main.SignupActivity">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+
+
+       <EditText
+           android:id="@+id/emailSignupTextfield"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:ems="10"
+           android:inputType="textPersonName"
+           android:hint="email"
+           tools:layout_editor_absoluteX="84dp"
+           tools:layout_editor_absoluteY="66dp" />
+       <EditText
+           android:id="@+id/usernameSignUpTextfield"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:ems="10"
+           android:inputType="textPersonName"
+           android:hint="username"
+           tools:layout_editor_absoluteX="85dp"
+           tools:layout_editor_absoluteY="145dp" />
+
+       <EditText
+           android:id="@+id/passwordSignUpTextfield"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:ems="10"
+           android:text=""
+           android:inputType="textPassword"
+           android:hint="Password"
+           tools:layout_editor_absoluteX="85dp"
+           tools:layout_editor_absoluteY="217dp" />
+
+
+       <Button
+           android:id="@+id/signUpButton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Signup"
+           tools:layout_editor_absoluteX="148dp"
+           tools:layout_editor_absoluteY="320dp" />
+   </LinearLayout>
+
+
+
+</RelativeLayout>
