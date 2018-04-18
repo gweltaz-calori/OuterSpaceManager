@@ -9,5 +9,6 @@ import model.Building;
  */
 
 public interface BuildingDetailView {
-
+    void showBuildChoiceDialog(Building building);
+    void onBuildingCreated(String name);
 }

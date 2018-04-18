@@ -31,7 +31,7 @@ public class BuildingListFragment extends Fragment implements BuildingListItemsV
     BuildingListAdapter mBuildingsAdapter;
     BuildingListContentActivity activity;
 
-    User user;
+
 
 
     public BuildingListFragment() {
@@ -54,7 +54,7 @@ public class BuildingListFragment extends Fragment implements BuildingListItemsV
         presenter = new BuildingListItemsPresenterImpl(this);
         presenter.getBuildings(activity.getAccessTokenFromPref());
 
-        user = (User) getActivity().getIntent().getSerializableExtra("user");
+
 
         mBuildingsLayoutManager = new LinearLayoutManager(getContext());
         mBuildingsRecyclerView.setLayoutManager(mBuildingsLayoutManager);
@@ -64,7 +64,7 @@ public class BuildingListFragment extends Fragment implements BuildingListItemsV
         mBuildingsAdapter.setOnBuildingClickListener(new OnBuildingClickListener() {
             @Override
             public void onClick(Building building) {
-                presenter.showBuildChoiceDialog(building);
+                activity.showDetailFragment(building);
 
             }
         });
@@ -79,46 +79,5 @@ public class BuildingListFragment extends Fragment implements BuildingListItemsV
         mBuildingsAdapter.addAllBuildings(buildings);
     }
 
-    @Override
-    public void showBuildChoiceDialog(final Building building) {
 
-        activity.showDetailFragment(building);
-
-
-        /*Float userGas = user.getGas()* user.getGasModifier();
-        Float userminerals = user.getMinerals()* user.getMineralsModifier();
-
-        Long minBuildingGas = building.getGasCostLevel0() + building.getGasCostByLevel() * building.getLevel();
-        Long minBuildingMineral = building.getMineralCostLevel0() + building.getMineralCostByLevel() * building.getLevel();
-
-
-        if(userGas < minBuildingGas || userminerals < minBuildingMineral)
-            return;
-
-
-        final AlertDialog.Builder builder;
-        builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Construction")
-                .setMessage("Voulez vous construire une batiment")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        presenter.createBuilding(activity.getAccessTokenFromPref(),building);
-                    }
-                })
-                .setNegativeButton("Non", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                })
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();*/
-    }
-
-    @Override
-    public void onBuildingCreated(String name) {
-        Snackbar mySnackbar = Snackbar.make(getView().findViewById(R.id.buildingLayout),
-                "Building "+name, Snackbar.LENGTH_SHORT);
-        mySnackbar.show();
-
-    }
 }

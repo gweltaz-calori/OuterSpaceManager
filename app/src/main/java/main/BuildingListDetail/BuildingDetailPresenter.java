@@ -9,4 +9,6 @@ import model.Building;
 public interface BuildingDetailPresenter {
 
 
+    void showBuildChoiceDialog(Building building);
+    void createBuilding(String token, Building building);
 }

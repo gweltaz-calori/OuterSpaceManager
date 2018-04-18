@@ -10,6 +10,4 @@ import model.Building;
 
 public interface BuildingListItemsView {
     void onBuildings(ArrayList<Building> buildings);
-    void showBuildChoiceDialog(Building building);
-    void onBuildingCreated(String name);
 }

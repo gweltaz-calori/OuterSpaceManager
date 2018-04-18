@@ -31,6 +31,7 @@ public class BuildingListContentActivity extends SharedPreferencesActivity imple
         if(fragment == null) {
             Intent intent = new Intent(this, BuildingDetailActivity.class);
             intent.putExtra("building",building);
+            intent.putExtra("user",getIntent().getExtras().getSerializable("user"));
             startActivity(intent);
         }
         else {

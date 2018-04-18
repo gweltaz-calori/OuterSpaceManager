@@ -11,9 +11,10 @@ import com.example.gcalori.outerspacemanager.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import main.BuildingListDetail.BuildingDetailFragment;
+import main.SharedPreferencesActivity;
 import model.Building;
 
-public class BuildingDetailActivity extends AppCompatActivity {
+public class BuildingDetailActivity extends SharedPreferencesActivity {
 
 
 
