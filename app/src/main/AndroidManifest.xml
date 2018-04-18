@@ -21,7 +21,8 @@
         </activity>
         <activity android:name="main.SignIn.SignInActivity" />
         <activity android:name="main.App.AppActivity" />
-        <activity android:name="main.Building.BuildingActivity"></activity>
+        <activity android:name="main.BuildingListContent.BuildingListContentActivity" />
+        <activity android:name="main.BuildingDetail.BuildingDetailActivity"></activity>
     </application>
 
 </manifest>

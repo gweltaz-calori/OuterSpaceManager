@@ -49,4 +49,9 @@ public class SignInPresenterImpl implements SignInPresenter {
             }
         });
     }
+
+    @Override
+    public void navigateToApp() {
+        this.view.navigateToApp();
+    }
 }

@@ -1,5 +1,6 @@
 package main.SignIn;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import com.google.gson.Gson;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import main.App.AppActivity;
 import main.SharedPreferencesActivity;
 import services.SignInRequestBody;
 import services.SignUpRequestBody;
@@ -64,11 +66,18 @@ public class SignInActivity extends SharedPreferencesActivity implements SignInV
     public void onSignedIn(SignUpResponseBody body) {
         System.out.println("Signed in :)");
         storeAccessToken(body.getToken());
+        presenter.navigateToApp();
     }
 
     @Override
     public void onSignedInError() {
         Toast.makeText(getApplicationContext(),"An error occured",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void navigateToApp() {
+        Intent intent = new Intent(getApplicationContext(), AppActivity.class);
+        startActivity(intent);
     }
 
 }

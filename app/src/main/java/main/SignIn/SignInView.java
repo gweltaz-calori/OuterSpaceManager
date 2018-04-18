@@ -9,4 +9,5 @@ import services.SignUpResponseBody;
 public interface SignInView {
     void onSignedIn(SignUpResponseBody body);
     void onSignedInError();
+    void navigateToApp();
 }

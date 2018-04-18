@@ -1,31 +1,25 @@
-package main.Building;
-
-import android.util.Log;
+package main.BuildingListItems;
 
 import model.Building;
 import model.BuildingResponse;
-import model.User;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import services.ApiService;
-import services.SignUpResponseBody;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by gcalori on 26/03/2018.
  */
 
-public class BuildingPresenterImpl implements BuildingPresenter {
+public class BuildingListItemsPresenterImpl implements BuildingListItemsPresenter {
 
-    private BuildingView view;
+    private BuildingListItemsView view;
 
-    public BuildingView getView() {
+    public BuildingListItemsView getView() {
         return view;
     }
 
-    BuildingPresenterImpl(BuildingView view) {
+    BuildingListItemsPresenterImpl(BuildingListItemsView view) {
         this.view = view;
     }
 

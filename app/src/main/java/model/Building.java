@@ -1,10 +1,12 @@
 package model;
 
+import java.io.Serializable;
+
 /**
  * Created by gcalori on 27/03/2018.
  */
 
-public class Building {
+public class Building implements Serializable {
     Long level;
     Long amountOfEffectByLevel;
     Long amountOfEffectLevel0;

@@ -10,5 +10,5 @@ import services.SignUpRequestBody;
 public interface SignInPresenter {
 
     void signIn(SignInRequestBody body);
-
+    void navigateToApp();
 }

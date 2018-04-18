@@ -10,7 +10,7 @@ import com.example.gcalori.outerspacemanager.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import main.Building.BuildingActivity;
+import main.BuildingListContent.BuildingListContentActivity;
 import main.Home.HomeActivity;
 import main.SharedPreferencesActivity;
 import model.User;
@@ -66,9 +66,10 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
 
     @Override
     public void navigateToBuilding() {
-        Intent intent = new Intent(getApplicationContext(), BuildingActivity.class);
+        Intent intent = new Intent(getApplicationContext(), BuildingListContentActivity.class);
         intent.putExtra("user",user);
         startActivity(intent);
+
     }
 
     @Override

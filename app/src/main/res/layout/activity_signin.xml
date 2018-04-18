@@ -13,16 +13,6 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content">
 
-       <EditText
-           android:id="@+id/passworSignInTextfield"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:ems="10"
-           android:inputType="textPassword"
-           android:text=""
-           android:hint="Password"
-           tools:layout_editor_absoluteX="85dp"
-           tools:layout_editor_absoluteY="217dp" />
 
        <EditText
            android:id="@+id/usernameSignInTextfield"
@@ -34,6 +24,19 @@
            android:text=""
            tools:layout_editor_absoluteX="85dp"
            tools:layout_editor_absoluteY="145dp" />
+
+       <EditText
+           android:id="@+id/passworSignInTextfield"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:ems="10"
+           android:inputType="textPassword"
+           android:text=""
+           android:hint="Password"
+           tools:layout_editor_absoluteX="85dp"
+           tools:layout_editor_absoluteY="217dp" />
+
+
 
        <Button
            android:id="@+id/signInButton"
