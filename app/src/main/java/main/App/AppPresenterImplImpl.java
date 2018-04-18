@@ -27,6 +27,16 @@ class AppPresenterImpl extends AuthPresenterImpl implements AppPresenter {
     }
 
     @Override
+    public void navigateToShips() {
+        view.navigateToShips();
+    }
+
+    @Override
+    public void navigateToFleet() {
+        this.view.navigateToFleet();
+    }
+
+    @Override
     protected AuthView getAuthView() {
         return view;
     }

@@ -26,6 +26,26 @@
         android:layout_height="wrap_content"
         android:text="0 points" />
 
+    <TextView
+
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:id="@+id/userGas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gas" />
+
+    <TextView
+
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:id="@+id/userMinerals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minerals" />
+
     <LinearLayout
         android:padding="20dp"
         android:orientation="vertical"

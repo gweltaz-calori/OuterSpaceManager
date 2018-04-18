@@ -1,6 +1,8 @@
 package services;
 
 import model.BuildingResponse;
+import model.FleetResponse;
+import model.ShipResponse;
 import model.User;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -46,9 +48,26 @@ public interface ApiService {
             @Header("x-access-token") String token
     );
 
+    @GET("ships")
+    Call<ShipResponse> getShips(
+            @Header("x-access-token") String token
+    );
+
+    @GET("fleet/list")
+    Call<FleetResponse> getFleet(
+            @Header("x-access-token") String token
+    );
+
     @POST("buildings/create/{buildingId}")
     Call<BuildingResponse> createBuilding(
             @Path("buildingId") Long buildingId,
+            @Header("x-access-token") String token
+    );
+
+    @POST("ships/create/{shipId}")
+    Call<ShipResponse> createShip(
+            @Path("shipId") Long shipId,
+            @Body ShipRequestBody body,
             @Header("x-access-token") String token
     );
 

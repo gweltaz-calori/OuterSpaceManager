@@ -10,4 +10,6 @@ import model.User;
 public interface AppView extends AuthView {
     void navigateToBuilding();
     void navigateToHome();
+    void navigateToShips();
+    void navigateToFleet();
 }

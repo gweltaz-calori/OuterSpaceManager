@@ -136,6 +136,10 @@ public class BuildingDetailFragment extends Fragment implements BuildingDetailVi
 
     @Override
     public void onBuildingCreated(String name) {
+
+        if(getActivity() == null)
+            return;
+
         Snackbar mySnackbar = Snackbar.make(getActivity().findViewById(R.id.content),
                 "Building "+name, Snackbar.LENGTH_SHORT);
         mySnackbar.show();

@@ -11,14 +11,22 @@ import com.example.gcalori.outerspacemanager.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import main.BuildingListContent.BuildingListContentActivity;
+import main.Fleet.FleetActivity;
 import main.Home.HomeActivity;
 import main.SharedPreferencesActivity;
+import main.ShipListContent.ShipListContentActivity;
 import model.User;
 
 public class AppActivity extends SharedPreferencesActivity implements AppView {
 
     @BindView(R.id.pointsTextView)
     TextView mPointsTextView;
+
+    @BindView(R.id.userGas)
+    TextView mGas;
+
+    @BindView(R.id.userMinerals)
+    TextView mMinerals;
 
     @BindView(R.id.usernameTextView)
     TextView mUsernameTextView;
@@ -28,6 +36,12 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
 
     @BindView(R.id.goToBuildingslButton)
     Button mBuildingsButton;
+
+    @BindView(R.id.goToFlotteButton)
+    Button mShipsButton;
+
+    @BindView(R.id.goToSpatialButton)
+    Button mFleetButton;
 
     AppPresenterImpl presenter;
 
@@ -49,10 +63,24 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
             }
         });
 
+        mShipsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.navigateToFleet();
+            }
+        });
+
         mLogoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.logout();
+            }
+        });
+
+        mFleetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.navigateToShips();
             }
         });
     }
@@ -60,7 +88,9 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
     @Override
     public void onUserLoaded(User user) {
         this.user = user;
-        mPointsTextView.setText(user.getPoints().toString());
+        mPointsTextView.setText(user.getPoints().toString()+" pts");
+        mGas.setText("Gas : "+String.valueOf(user.getGas()));
+        mMinerals.setText("Minerals : "+String.valueOf(user.getMinerals()));
         mUsernameTextView.setText(user.getUsername());
     }
 
@@ -75,6 +105,18 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
     @Override
     public void navigateToHome() {
         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToShips() {
+        Intent intent = new Intent(getApplicationContext(), ShipListContentActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToFleet() {
+        Intent intent = new Intent(getApplicationContext(), FleetActivity.class);
         startActivity(intent);
     }
 
