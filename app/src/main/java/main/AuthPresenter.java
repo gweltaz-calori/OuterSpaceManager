@@ -8,5 +8,6 @@ import model.User;
 
 public interface AuthPresenter {
     void getCurrentUser(String token);
+    void getUserFleet(String token);
     void logout();
 }

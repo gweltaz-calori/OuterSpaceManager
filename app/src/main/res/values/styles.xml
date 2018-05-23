@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CustomButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/space_button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
 </resources>

@@ -1,7 +1,9 @@
 package services;
 
+import model.AttackResponse;
 import model.BuildingResponse;
 import model.FleetResponse;
+import model.LeaderboardUserResponse;
 import model.ShipResponse;
 import model.User;
 import retrofit2.Call;
@@ -61,6 +63,20 @@ public interface ApiService {
     @POST("buildings/create/{buildingId}")
     Call<BuildingResponse> createBuilding(
             @Path("buildingId") Long buildingId,
+            @Header("x-access-token") String token
+    );
+
+    @GET("users/{from}/{limit}")
+    Call<LeaderboardUserResponse> getLeaderboardUsers(
+            @Path("from") int from,
+            @Path("limit") int to,
+            @Header("x-access-token") String token
+    );
+
+    @GET("fleet/attack/{userName}")
+    Call<AttackResponse> attackUser(
+            @Path("userName") String userName,
+            @Body AttackRequestBody body,
             @Header("x-access-token") String token
     );
 

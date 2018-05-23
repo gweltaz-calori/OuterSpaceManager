@@ -8,13 +8,17 @@ import android.widget.TextView;
 
 import com.example.gcalori.outerspacemanager.R;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import main.BuildingListContent.BuildingListContentActivity;
 import main.Fleet.FleetActivity;
 import main.Home.HomeActivity;
+import main.Leaderboard.LeaderboardActivity;
 import main.SharedPreferencesActivity;
 import main.ShipListContent.ShipListContentActivity;
+import model.ShipAmount;
 import model.User;
 
 public class AppActivity extends SharedPreferencesActivity implements AppView {
@@ -42,6 +46,9 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
 
     @BindView(R.id.goToSpatialButton)
     Button mFleetButton;
+
+    @BindView(R.id.goToUsersButton)
+    Button mUsersLeaderboard;
 
     AppPresenterImpl presenter;
 
@@ -83,6 +90,13 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
                 presenter.navigateToShips();
             }
         });
+
+        mUsersLeaderboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.navigateToLeaderboard();
+            }
+        });
     }
 
     @Override
@@ -92,6 +106,11 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
         mGas.setText("Gas : "+String.valueOf(user.getGas()));
         mMinerals.setText("Minerals : "+String.valueOf(user.getMinerals()));
         mUsernameTextView.setText(user.getUsername());
+    }
+
+    @Override
+    public void onFleet(ArrayList<ShipAmount> fleet) {
+
     }
 
     @Override
@@ -117,6 +136,12 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
     @Override
     public void navigateToFleet() {
         Intent intent = new Intent(getApplicationContext(), FleetActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToLeaderboard() {
+        Intent intent = new Intent(getApplicationContext(), LeaderboardActivity.class);
         startActivity(intent);
     }
 

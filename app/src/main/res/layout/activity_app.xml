@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textAlignment="center"
         android:id="@+id/usernameTextView"
         android:layout_width="match_parent"
@@ -18,8 +18,8 @@
 
     <TextView
 
-        android:layout_marginTop="10dp"
-        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="10dp"
         android:textAlignment="center"
         android:id="@+id/pointsTextView"
         android:layout_width="match_parent"
@@ -28,8 +28,8 @@
 
     <TextView
 
-        android:layout_marginTop="10dp"
-        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="10dp"
         android:textAlignment="center"
         android:id="@+id/userGas"
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
     <TextView
 
         android:layout_marginTop="10dp"
-        android:textSize="20dp"
+        android:textSize="10dp"
         android:textAlignment="center"
         android:id="@+id/userMinerals"
         android:layout_width="match_parent"
@@ -77,6 +77,13 @@
             android:id="@+id/goToSpatialButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Leaderboard"
+            android:id="@+id/goToUsersButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <Button
             android:text="Galaxie"
             android:id="@+id/goToGalaxyButton"

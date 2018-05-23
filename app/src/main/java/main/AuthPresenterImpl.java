@@ -2,6 +2,7 @@ package main;
 
 import android.util.Log;
 
+import model.FleetResponse;
 import model.User;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,6 +36,28 @@ public abstract class AuthPresenterImpl implements AuthPresenter {
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 Log.d(TAG, "onFailure: "+t.getMessage());
+            }
+        });
+    }
+
+    @Override
+    public void getUserFleet(String token) {
+        ApiService apiService = ApiService.retrofit
+                .create(ApiService.class);
+
+        Call<FleetResponse> call = apiService.getFleet(token);
+
+        call.enqueue(new Callback<FleetResponse>() {
+            @Override
+            public void onResponse(Call<FleetResponse> call, Response<FleetResponse> response) {
+                if(response.isSuccessful()) {
+                    getAuthView().onFleet(response.body().getShips());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<FleetResponse> call, Throwable t) {
+
             }
         });
     }
