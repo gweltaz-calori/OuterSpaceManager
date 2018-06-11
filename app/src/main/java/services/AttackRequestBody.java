@@ -10,13 +10,13 @@ import model.ShipAmount;
  */
 
 public class AttackRequestBody {
-    private ArrayList<AttackShipAmount> ships;
+    private ArrayList<ShipAmount> ships;
 
-    public ArrayList<AttackShipAmount> getShips() {
+    public ArrayList<ShipAmount> getShips() {
         return ships;
     }
 
-    public void setShips(ArrayList<AttackShipAmount> ships) {
+    public void setShips(ArrayList<ShipAmount> ships) {
         this.ships = ships;
     }
 }

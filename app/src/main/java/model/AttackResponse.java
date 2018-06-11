@@ -23,4 +23,12 @@ public class AttackResponse {
     public void setAttackTime(Long attackTime) {
         this.attackTime = attackTime;
     }
+
+    @Override
+    public String toString() {
+        return "AttackResponse{" +
+                "code='" + code + '\'' +
+                ", attackTime=" + attackTime +
+                '}';
+    }
 }

@@ -3,6 +3,7 @@ package main;
 import android.util.Log;
 
 import model.FleetResponse;
+import model.ShipResponse;
 import model.User;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,6 +62,8 @@ public abstract class AuthPresenterImpl implements AuthPresenter {
             }
         });
     }
+
+
 
     @Override
     public void logout() {

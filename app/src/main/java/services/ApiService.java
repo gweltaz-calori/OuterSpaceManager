@@ -73,7 +73,7 @@ public interface ApiService {
             @Header("x-access-token") String token
     );
 
-    @GET("fleet/attack/{userName}")
+    @POST("fleet/attack/{userName}")
     Call<AttackResponse> attackUser(
             @Path("userName") String userName,
             @Body AttackRequestBody body,

@@ -25,8 +25,6 @@ public class ShipListItemsPresenterImpl implements ShipListItemsPresenter {
         this.view = view;
     }
 
-
-
     @Override
     public void getShips(String token) {
         ApiService apiService = ApiService.retrofit

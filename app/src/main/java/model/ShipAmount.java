@@ -10,6 +10,10 @@ public class ShipAmount extends Ship implements Serializable {
 
     Long amount;
 
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
+
     public Long getAmount() {
         return amount;
     }

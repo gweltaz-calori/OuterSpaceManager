@@ -2,6 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
+import model.Ship;
 import model.ShipAmount;
 import model.User;
 

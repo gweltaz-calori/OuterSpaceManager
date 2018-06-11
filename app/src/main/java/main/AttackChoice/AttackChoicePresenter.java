@@ -5,5 +5,5 @@ package main.AttackChoice;
  */
 
 public interface AttackChoicePresenter {
-
+    void onAttack();
 }

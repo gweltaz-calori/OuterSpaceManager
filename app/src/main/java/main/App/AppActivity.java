@@ -18,6 +18,7 @@ import main.Home.HomeActivity;
 import main.Leaderboard.LeaderboardActivity;
 import main.SharedPreferencesActivity;
 import main.ShipListContent.ShipListContentActivity;
+import model.Ship;
 import model.ShipAmount;
 import model.User;
 
@@ -150,4 +151,5 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
         clearToken();
         presenter.navigateToHome();
     }
+
 }
