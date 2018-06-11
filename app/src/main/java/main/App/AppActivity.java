@@ -2,11 +2,15 @@ package main.App;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.gcalori.outerspacemanager.R;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.ArrayList;
 
@@ -21,8 +25,11 @@ import main.ShipListContent.ShipListContentActivity;
 import model.Ship;
 import model.ShipAmount;
 import model.User;
+import services.AppFirebaseInstanceIdService;
 
 public class AppActivity extends SharedPreferencesActivity implements AppView {
+
+    AppFirebaseInstanceIdService instanceIdService;
 
     @BindView(R.id.pointsTextView)
     TextView mPointsTextView;
@@ -98,6 +105,11 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
                 presenter.navigateToLeaderboard();
             }
         });
+
+        String token = FirebaseInstanceId.getInstance().getToken();
+
+        presenter.addDeviceToken(token,getAccessTokenFromPref());
+
     }
 
     @Override

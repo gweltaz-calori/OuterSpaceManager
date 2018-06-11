@@ -2,6 +2,7 @@ package services;
 
 import model.AttackResponse;
 import model.BuildingResponse;
+import model.DeviceTokenResponse;
 import model.FleetResponse;
 import model.LeaderboardUserResponse;
 import model.ShipResponse;
@@ -70,6 +71,12 @@ public interface ApiService {
     Call<LeaderboardUserResponse> getLeaderboardUsers(
             @Path("from") int from,
             @Path("limit") int to,
+            @Header("x-access-token") String token
+    );
+
+    @POST("devices/add")
+    Call<DeviceTokenResponse> addDeviceToken(
+            @Body DeviceTokenBody body,
             @Header("x-access-token") String token
     );
 

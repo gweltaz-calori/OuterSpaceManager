@@ -13,5 +13,4 @@ public interface AppPresenter extends AuthPresenter {
     void navigateToShips();
     void navigateToFleet();
     void navigateToLeaderboard();
-
 }

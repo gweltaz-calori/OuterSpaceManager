@@ -1,7 +1,9 @@
 package main;
 
+import android.content.SharedPreferences;
 import android.util.Log;
 
+import model.DeviceTokenResponse;
 import model.FleetResponse;
 import model.ShipResponse;
 import model.User;
@@ -9,6 +11,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import services.ApiService;
+import services.DeviceTokenBody;
 
 import static android.content.ContentValues.TAG;
 
@@ -63,7 +66,29 @@ public abstract class AuthPresenterImpl implements AuthPresenter {
         });
     }
 
+    @Override
+    public void addDeviceToken(String deviceToken,String accessToken) {
+        ApiService apiService = ApiService.retrofit
+                .create(ApiService.class);
 
+        DeviceTokenBody body = new DeviceTokenBody();
+        body.setDeviceToken(deviceToken);
+
+        Call<DeviceTokenResponse> call = apiService.addDeviceToken(body,accessToken);
+
+        call.enqueue(new Callback<DeviceTokenResponse>() {
+            @Override
+            public void onResponse(Call<DeviceTokenResponse> call, Response<DeviceTokenResponse> response) {
+                Log.d("deviceToken", "onResponse: "+response.body().getCode());
+            }
+
+            @Override
+            public void onFailure(Call<DeviceTokenResponse> call, Throwable t) {
+
+            }
+
+        });
+    }
 
     @Override
     public void logout() {

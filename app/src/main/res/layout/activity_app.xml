@@ -1,100 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
-    tools:context="main.App.AppActivity">
+    xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
-
-    <TextView
-        android:textSize="20dp"
-        android:textAlignment="center"
-        android:id="@+id/usernameTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Username" />
-
-    <TextView
-
-        android:layout_marginTop="5dp"
-        android:textSize="10dp"
-        android:textAlignment="center"
-        android:id="@+id/pointsTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="0 points" />
-
-    <TextView
-
-        android:layout_marginTop="5dp"
-        android:textSize="10dp"
-        android:textAlignment="center"
-        android:id="@+id/userGas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gas" />
-
-    <TextView
-
-        android:layout_marginTop="10dp"
-        android:textSize="10dp"
-        android:textAlignment="center"
-        android:id="@+id/userMinerals"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Minerals" />
 
     <LinearLayout
-        android:padding="20dp"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context="main.App.AppActivity">
 
-        <Button
-            android:id="@+id/goToGlobalButton"
-            android:text="Vue générale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="Batiments"
-            android:id="@+id/goToBuildingslButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="Flotte"
-            android:id="@+id/goToFlotteButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="Recherches"
-            android:id="@+id/goToSearchesButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="Chantier spatial"
-            android:id="@+id/goToSpatialButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-        <Button
-            android:text="Leaderboard"
-            android:id="@+id/goToUsersButton"
+        <TextView
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:id="@+id/usernameTextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Username" />
 
-        <Button
-            android:text="Galaxie"
-            android:id="@+id/goToGalaxyButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <TextView
 
-        <Button
-            android:text="Logout"
-            android:background="@android:color/holo_red_dark"
-            android:id="@+id/logoutButton"
+            android:layout_marginTop="5dp"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:id="@+id/pointsTextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="0 points" />
+
+        <TextView
+
+            android:layout_marginTop="5dp"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:id="@+id/userGas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gas" />
+
+        <TextView
+
+            android:layout_marginTop="10dp"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:id="@+id/userMinerals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minerals" />
+
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/goToGlobalButton"
+                android:text="Vue générale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Batiments"
+                android:id="@+id/goToBuildingslButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Flotte"
+                android:id="@+id/goToFlotteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Recherches"
+                android:id="@+id/goToSearchesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Chantier spatial"
+                android:id="@+id/goToSpatialButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:text="Leaderboard"
+                android:id="@+id/goToUsersButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="Galaxie"
+                android:id="@+id/goToGalaxyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="Logout"
+                android:background="@android:color/holo_red_dark"
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>

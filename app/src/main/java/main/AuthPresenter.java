@@ -10,4 +10,5 @@ public interface AuthPresenter {
     void getCurrentUser(String token);
     void getUserFleet(String token);
     void logout();
+    void addDeviceToken(String deviceToken,String accessToken);
 }
