@@ -57,11 +57,6 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/goToGlobalButton"
-                android:text="Vue générale"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
                 android:text="Batiments"
                 android:id="@+id/goToBuildingslButton"
                 android:layout_width="match_parent"
@@ -84,14 +79,14 @@
 
 
             <Button
-                android:text="Leaderboard"
-                android:id="@+id/goToUsersButton"
+                android:text="Reports"
+                android:id="@+id/goToReports"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <Button
                 android:text="Galaxie"
-                android:id="@+id/goToGalaxyButton"
+                android:id="@+id/goToUsersButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

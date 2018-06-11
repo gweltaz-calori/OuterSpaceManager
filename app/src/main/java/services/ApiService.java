@@ -5,6 +5,7 @@ import model.BuildingResponse;
 import model.DeviceTokenResponse;
 import model.FleetResponse;
 import model.LeaderboardUserResponse;
+import model.SearchResponse;
 import model.ShipResponse;
 import model.User;
 import retrofit2.Call;
@@ -91,6 +92,22 @@ public interface ApiService {
     Call<ShipResponse> createShip(
             @Path("shipId") Long shipId,
             @Body ShipRequestBody body,
+            @Header("x-access-token") String token
+    );
+
+    @GET("searches/create/{searchId}")
+    Call<BuildingResponse> createSearch(
+            @Path("searchId") Long searchId,
+            @Header("x-access-token") String token
+    );
+
+    @GET("searches/list")
+    Call<SearchResponse> getSearch(
+            @Header("x-access-token") String token
+    );
+
+    @GET("reports/1/20")
+    Call<ReportResponseBody> getReports(
             @Header("x-access-token") String token
     );
 

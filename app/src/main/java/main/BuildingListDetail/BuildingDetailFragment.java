@@ -105,15 +105,9 @@ public class BuildingDetailFragment extends Fragment implements BuildingDetailVi
     @Override
     public void showBuildChoiceDialog(final Building building) {
 
-        Float userGas = user.getGas()* user.getGasModifier();
-        Float userminerals = user.getMinerals()* user.getMineralsModifier();
-
-        Long minBuildingGas = building.getGasCostLevel0() + building.getGasCostByLevel() * building.getLevel();
-        Long minBuildingMineral = building.getMineralCostLevel0() + building.getMineralCostByLevel() * building.getLevel();
-
-
-        if(userGas < minBuildingGas || userminerals < minBuildingMineral)
+        if(!user.hasResources(building)) {
             return;
+        }
 
 
         final AlertDialog.Builder builder;

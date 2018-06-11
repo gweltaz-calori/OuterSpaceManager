@@ -20,6 +20,8 @@ import main.BuildingListContent.BuildingListContentActivity;
 import main.Fleet.FleetActivity;
 import main.Home.HomeActivity;
 import main.Leaderboard.LeaderboardActivity;
+import main.Report.ReportActivity;
+import main.Research.ResearchActivity;
 import main.SharedPreferencesActivity;
 import main.ShipListContent.ShipListContentActivity;
 import model.Ship;
@@ -48,6 +50,12 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
 
     @BindView(R.id.goToBuildingslButton)
     Button mBuildingsButton;
+
+    @BindView(R.id.goToSearchesButton)
+    Button mGotoResearchButton;
+
+    @BindView(R.id.goToReports)
+    Button mReportsButton;
 
     @BindView(R.id.goToFlotteButton)
     Button mShipsButton;
@@ -96,6 +104,20 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
             @Override
             public void onClick(View v) {
                 presenter.navigateToShips();
+            }
+        });
+
+        mReportsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.navigateToReports();
+            }
+        });
+
+        mGotoResearchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.navigateToResearches();
             }
         });
 
@@ -155,6 +177,19 @@ public class AppActivity extends SharedPreferencesActivity implements AppView {
     @Override
     public void navigateToLeaderboard() {
         Intent intent = new Intent(getApplicationContext(), LeaderboardActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToReports() {
+        Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToResearches() {
+        Intent intent = new Intent(getApplicationContext(), ResearchActivity.class);
+        intent.putExtra("user",user);
         startActivity(intent);
     }
 

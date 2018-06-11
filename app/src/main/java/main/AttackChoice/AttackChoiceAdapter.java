@@ -56,6 +56,8 @@ public class AttackChoiceAdapter extends RecyclerView.Adapter<main.AttackChoice.
         final TextView amount = holder.amount;
         name.setText(ship.getName());
 
+        progress.setMax(ship.getAmount().intValue());
+
         progress.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

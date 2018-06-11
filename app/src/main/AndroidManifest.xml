@@ -27,18 +27,21 @@
         <activity android:name="main.BuildingDetail.BuildingDetailActivity" />
         <activity android:name="main.Fleet.FleetActivity" />
         <activity android:name="main.Leaderboard.LeaderboardActivity" />
+        <activity android:name="main.Report.ReportActivity" />
 
         <service android:name="services.AppFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service
-            android:name="services.AppFirebaseMessagingService">
+        <service android:name="services.AppFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <activity android:name="main.Research.ResearchActivity"></activity>
+        <activity android:name="main.ResearchDetail.ResearchDetailActivity" />
     </application>
 
 </manifest>

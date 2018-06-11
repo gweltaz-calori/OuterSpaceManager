@@ -1,17 +1,14 @@
 package model;
 
-import java.io.Serializable;
-
 /**
- * Created by gcalori on 27/03/2018.
+ * Created by gcalori on 11/06/2018.
  */
 
-public class Building implements Serializable {
+public class GenericBuilding {
+
     Long level;
     Long amountOfEffectByLevel;
     Long amountOfEffectLevel0;
-    Long buildingId;
-    Long searchId;
     boolean building;
     String effect;
     Long gasCostByLevel;
@@ -47,21 +44,6 @@ public class Building implements Serializable {
         this.amountOfEffectLevel0 = amountOfEffectLevel0;
     }
 
-    public void setSearchId(Long searchId) {
-        this.searchId = searchId;
-    }
-
-    public Long getSearchId() {
-        return searchId;
-    }
-
-    public Long getBuildingId() {
-        return buildingId;
-    }
-
-    public void setBuildingId(Long buildingId) {
-        this.buildingId = buildingId;
-    }
 
     public boolean isBuilding() {
         return building;
@@ -143,23 +125,5 @@ public class Building implements Serializable {
         this.timeToBuildLevel0 = timeToBuildLevel0;
     }
 
-    @Override
-    public String toString() {
-        return "Building{" +
-                "level=" + level +
-                ", amountOfEffectByLevel=" + amountOfEffectByLevel +
-                ", amountOfEffectLevel0=" + amountOfEffectLevel0 +
-                ", buildingId=" + buildingId +
-                ", building=" + building +
-                ", effect='" + effect + '\'' +
-                ", gasCostByLevel=" + gasCostByLevel +
-                ", gasCostLevel0=" + gasCostLevel0 +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", mineralCostByLevel=" + mineralCostByLevel +
-                ", mineralCostLevel0=" + mineralCostLevel0 +
-                ", name='" + name + '\'' +
-                ", timeToBuildByLevel=" + timeToBuildByLevel +
-                ", timeToBuildLevel0=" + timeToBuildLevel0 +
-                '}';
-    }
+
 }

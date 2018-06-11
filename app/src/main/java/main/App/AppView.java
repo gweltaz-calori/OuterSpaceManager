@@ -13,4 +13,7 @@ public interface AppView extends AuthView {
     void navigateToShips();
     void navigateToFleet();
     void navigateToLeaderboard();
+    void navigateToReports();
+    void navigateToResearches();
+
 }

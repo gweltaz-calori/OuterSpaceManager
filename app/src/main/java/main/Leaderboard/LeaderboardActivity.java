@@ -62,6 +62,8 @@ public class LeaderboardActivity extends SharedPreferencesActivity implements Le
         mLeaderboardAdapter = new LeaderboardListAdapter(getApplicationContext());
         mLeaderboardRecyclerView.setAdapter(mLeaderboardAdapter);
 
+
+
         SwipeToDeleteCallback handler = new SwipeToDeleteCallback(this) {
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {

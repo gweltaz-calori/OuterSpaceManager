@@ -64,6 +64,19 @@ public class User implements Serializable {
         this.username = username;
     }
 
+
+    public boolean hasResources(Building building) {
+        Float userGas = getGas()* getGasModifier();
+        Float userminerals = getMinerals()* getMineralsModifier();
+
+        Long minBuildingGas = building.getGasCostLevel0() + building.getGasCostByLevel() * building.getLevel();
+        Long minBuildingMineral = building.getMineralCostLevel0() + building.getMineralCostByLevel() * building.getLevel();
+
+
+        return userGas >= minBuildingGas && userminerals >= minBuildingMineral;
+
+    }
+
     @Override
     public String toString() {
         return "User{" +

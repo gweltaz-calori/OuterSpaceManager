@@ -42,6 +42,16 @@ class AppPresenterImpl extends AuthPresenterImpl implements AppPresenter {
     }
 
     @Override
+    public void navigateToReports() {
+        this.view.navigateToReports();
+    }
+
+    @Override
+    public void navigateToResearches() {
+        view.navigateToResearches();
+    }
+
+    @Override
     protected AuthView getAuthView() {
         return view;
     }
