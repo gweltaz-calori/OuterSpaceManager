@@ -48,15 +48,18 @@ public class ResearchDetailPresenterImpl implements ResearchDetailPresenter {
         call.enqueue(new Callback<BuildingResponse>() {
             @Override
             public void onResponse(Call<BuildingResponse> call, Response<BuildingResponse> response) {
-                Log.d("body", "onResponse: "+response.body());
+
                 if(response.isSuccessful()) {
                     view.onResearchCreated(building.getName());
+                }
+                else  {
+                    view.onResearchCreated("No enough resources");
                 }
             }
 
             @Override
             public void onFailure(Call<BuildingResponse> call, Throwable t) {
-                Log.d("body", "onResponse: "+t);
+                Log.d("bodyFail", "onResponse: "+t);
             }
         });
     }

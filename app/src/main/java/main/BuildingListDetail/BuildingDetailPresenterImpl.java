@@ -39,7 +39,10 @@ public class BuildingDetailPresenterImpl implements BuildingDetailPresenter {
             @Override
             public void onResponse(Call<BuildingResponse> call, Response<BuildingResponse> response) {
                 if(response.isSuccessful()) {
-                    view.onBuildingCreated(building.getName());
+                    view.onBuildingCreated("Searching "+building.getName());
+                }
+                else  {
+                    view.onBuildingCreated("No enough resources");
                 }
             }
 

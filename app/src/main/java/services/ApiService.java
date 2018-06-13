@@ -95,7 +95,7 @@ public interface ApiService {
             @Header("x-access-token") String token
     );
 
-    @GET("searches/create/{searchId}")
+    @POST("searches/create/{searchId}")
     Call<BuildingResponse> createSearch(
             @Path("searchId") Long searchId,
             @Header("x-access-token") String token

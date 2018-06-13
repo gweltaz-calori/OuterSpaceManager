@@ -82,7 +82,7 @@ public class ResearchDetailActivity extends SharedPreferencesActivity implements
     public void onResearchCreated(String name) {
 
         Snackbar mySnackbar = Snackbar.make(findViewById(R.id.content),
-                "Seearching "+name, Snackbar.LENGTH_SHORT);
+                 name, Snackbar.LENGTH_SHORT);
         mySnackbar.show();
     }
 }

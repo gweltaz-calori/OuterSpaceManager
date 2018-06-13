@@ -135,7 +135,7 @@ public class BuildingDetailFragment extends Fragment implements BuildingDetailVi
             return;
 
         Snackbar mySnackbar = Snackbar.make(getActivity().findViewById(R.id.content),
-                "Building "+name, Snackbar.LENGTH_SHORT);
+                name, Snackbar.LENGTH_SHORT);
         mySnackbar.show();
     }
 }
