@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "255596978168",
+    "firebase_url": "https://outerspacemanager-dcd2f.firebaseio.com",
+    "project_id": "outerspacemanager-dcd2f",
+    "storage_bucket": "outerspacemanager-dcd2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255596978168:android:4abc1d647c4d2203",
+        "android_client_info": {
+          "package_name": "com.example.gcalori.outerspacemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255596978168-khd71gn2mtvro5alv60bkgftv1dchg2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gcalori.outerspacemanager",
+            "certificate_hash": "d4f528104709d2aef2ae21ef9b4d40180c361310"
+          }
+        },
+        {
+          "client_id": "255596978168-npob561k3d1t8n9fe4cj03fjjsv5dp7n.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "255596978168-npob561k3d1t8n9fe4cj03fjjsv5dp7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD102heFr_dMhcTiNSlx2ADZl0hoEHowqA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255596978168-npob561k3d1t8n9fe4cj03fjjsv5dp7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
